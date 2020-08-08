@@ -9,7 +9,7 @@
   <van-cell v-for="item in list" :key="item.id" @click="handleClick(item.id)">
       <div class="list">
           <div class="left">
-              <img :src="item.img" alt="">
+              <van-image width="100" height="100" :src="item.img" />
           </div>
           <div class="right">
               <div class="title">{{item.title}}</div>
@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import { List,Cell } from 'vant';
+import { List,Cell,Image} from 'vant';
 import moment from 'moment';
 export default {
 data() {
@@ -34,7 +34,8 @@ data() {
  },
 components: {
     'van-list': List,
-    'van-cell': Cell
+    'van-cell': Cell,
+    'van-image': Image
 },methods: {
     handleClick(id) {
         this.$router.push({
