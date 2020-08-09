@@ -9,7 +9,7 @@
   <van-cell v-for="item in list" :key="item.id" @click="handleClick(item.id)">
       <div class="list">
           <div class="left">
-              <van-image width="100" height="100" :src="item.img" />
+              <van-image width="100" height="100" :src="item.img" fit="cover" />
           </div>
           <div class="right">
               <div class="title">{{item.title}}</div>
